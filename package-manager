@@ -1,0 +1,67 @@
+#! /bin/bash
+
+# Todo
+#  - Check if packer is already installed
+#    
+#  - Capture the option that specifies where to put 
+#    the Lua initializer for packer
+#
+#      e.g.: --init <path> and -i <path>
+#      examples: -i $HOME/.config/nvim/init.lua
+#
+#    Maybe the default behavior |
+
+# Capture the package manager
+# The avaiables are:
+#  - packer
+PM=$1
+
+# Foreground Colors
+normal="\e[30m"
+white="\e[37m"
+red="\e[31m"
+green="\e[32m"
+
+# Foreground Bolded Colors
+white_bold="\e[37;1m"
+red_bold="\e[31;1m"
+green_bold="\e[32;1m"
+
+nvim_folder=${HOME}/.local/share/nvim
+packer_path=${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+function check {
+  echo -e "${green_bold}== Verifing if everything is set up =="
+  if [ -d $packer_path ]; then
+    echo -e "${white_bold}Wait there, dude!"
+    echo -e "${white_bold}Packer already installed. Quiting..."
+    return 1
+  fi
+
+  if ! git -v &> /dev/null; then
+    echo -e "${red}[ERROR]"
+    echo -e "${white}=> Git not installed"
+    echo -e "=> We're finishing"
+
+    return 1
+  fi
+  echo -e "${red_bold}==> Git Installed"
+  echo -e "${normal}..."
+  echo -e "${white_bold}Let's go"
+}
+
+function install_packer {
+  if ! check; then
+    return 1;
+  fi
+
+  git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+}
+
+case $PM in
+  packer)
+    install_packer;;
+  *)
+    echo -e 
+esac
