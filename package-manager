@@ -38,7 +38,7 @@ function check {
     return 1
   fi
 
-  if ! git -v &> /dev/null; then
+  if ! git --version &> /dev/null; then
     echo -e "${red}[ERROR]"
     echo -e "${white}=> Git not installed"
     echo -e "=> We're finishing"
