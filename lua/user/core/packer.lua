@@ -49,21 +49,24 @@ packer.startup(function(use)
 
   -- NvimTree
   use {
-      'nvim-treesitter/nvim-treesitter',
+      "nvim-treesitter/nvim-treesitter",
       run = function()
-          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+          local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
           ts_update()
       end,
   } 
 
   -- Barbar
-  use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+  use {
+    "romgrk/barbar.nvim",
+    wants = "nvim-web-devicons"
+  }
 
   -- Indent Blankline
   use "lukas-reineke/indent-blankline.nvim"
 
   -- Comment
-  use 'numToStr/Comment.nvim'
+  use "numToStr/Comment.nvim"
 
   -- Autopairs --
   use {
@@ -95,26 +98,26 @@ packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- VSCode kind icons
-  use 'onsails/lspkind.nvim'
+  use "onsails/lspkind.nvim"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out use "lunarvim/darkplus.nvim"
   use "nvim-tree/nvim-tree.lua"
   use "rafi/awesome-vim-colorschemes"
-  use 'sam4llis/nvim-tundra'
+  use "sam4llis/nvim-tundra"
   use "ellisonleao/gruvbox.nvim"
 
   -- HTML utilities
-  use 'windwp/nvim-ts-autotag'
+  use "windwp/nvim-ts-autotag"
   -- CSS utilities
-  use 'norcalli/nvim-colorizer.lua'
-  use 'ziontee113/color-picker.nvim' -- pick colors in the terminal
+  use "norcalli/nvim-colorizer.lua"
+  use "ziontee113/color-picker.nvim" -- pick colors in the terminal
   
 
   -- Status Line ---
   use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    "nvim-lualine/lualine.nvim",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true }
   }
 end)
 
