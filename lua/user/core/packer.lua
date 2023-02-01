@@ -39,7 +39,7 @@ packer.init({
 })
 
 packer.startup(function(use)
-  
+
   -- As Dependecies
   use "nvim-tree/nvim-web-devicons" -- optional, for file icons
 
@@ -54,7 +54,7 @@ packer.startup(function(use)
           local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
           ts_update()
       end,
-  } 
+  }
 
   -- Barbar
   use {
@@ -112,7 +112,7 @@ packer.startup(function(use)
   -- CSS utilities
   use "norcalli/nvim-colorizer.lua"
   use "ziontee113/color-picker.nvim" -- pick colors in the terminal
-  
+
 
   -- Status Line ---
   use {
