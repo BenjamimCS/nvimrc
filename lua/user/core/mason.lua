@@ -63,3 +63,15 @@ lspConfig.tsserver.setup{}
 lspConfig.jsonls.setup{
   capabilities = capabilities
 }
+
+lspConfig.vimls.setup {
+  -- setup...
+}
+
+lspConfig.yamlls.setup {
+  -- setup...
+}
+
+lspConfig.pyright.setup {
+  -- setup...
+}
