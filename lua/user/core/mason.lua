@@ -20,7 +20,7 @@ masonLspConfig.setup()
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-lspConfig.sumneko_lua.setup {
+lspConfig.lua_ls.setup {
   settings = {
     Lua = {
       runtime = {
