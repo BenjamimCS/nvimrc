@@ -26,6 +26,10 @@ nvimTree.setup {
         {
           key = {'l', 'h'},
           action = 'edit'
+        },
+        {
+          key = {'<CR>'},
+          action = 'cd'
         }
       }
     }
