@@ -22,6 +22,10 @@ key('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
 -- Close buffer
 key('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 
+--- Preferences ---
+-- Enable/disable wrap
+key("n", "<leader>w", ":set wrap!<CR>")
+
 -- ^ + q : Save
 key("n", "<leader>s", ":w<CR>")
 key("i", "<C>s", "<ESC>:w<CR>")
