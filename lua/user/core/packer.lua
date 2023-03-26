@@ -119,7 +119,7 @@ packer.startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
 
-  -- Just beautifying it
+  -- Miscellaneous
     use {
       "nvim-lualine/lualine.nvim",
       requires = { "kyazdani42/nvim-web-devicons", opt = true }
@@ -131,6 +131,8 @@ packer.startup(function(use)
       use "sam4llis/nvim-tundra"
       use "ellisonleao/gruvbox.nvim"
 
+    -- Presence for Discord Rich Presence
+      use "andweeb/presence.nvim"
 end)
 
 --- Include the plugins ---
