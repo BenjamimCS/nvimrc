@@ -75,3 +75,7 @@ lspConfig.yamlls.setup {
 lspConfig.pyright.setup {
   -- setup...
 }
+
+lspConfig.powershell_es.setup {
+  -- setup...
+}
