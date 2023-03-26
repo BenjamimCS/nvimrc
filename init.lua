@@ -3,10 +3,10 @@ require("user.core.packer")
 require("user.global.mappings")
 require("user.core.autopairs")
 require("user.global.colorscheme")
+require("user.global.options")
 
 
 require("user.core.gitsigns")
-require("user.core.options")
 require("user.core.mason")
 require("user.core.cmp")
 require("user.core.nvim-tree")
