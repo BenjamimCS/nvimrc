@@ -3,6 +3,7 @@ require("user.core.packer")
 require("user.global.mappings")
 require("user.global.colorscheme")
 require("user.global.options")
+require("user.global.autocmds")
 
 
 require("user.core.autopairs")
