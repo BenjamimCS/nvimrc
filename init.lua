@@ -1,11 +1,11 @@
 require("user.core.packer")
 
 require("user.global.mappings")
-require("user.core.autopairs")
 require("user.global.colorscheme")
 require("user.global.options")
 
 
+require("user.core.autopairs")
 require("user.core.gitsigns")
 require("user.core.mason")
 require("user.core.cmp")
