@@ -87,6 +87,8 @@ packer.startup(function(use)
     use "matze/vim-move"
     -- Color code preview
     use "norcalli/nvim-colorizer.lua"
+    -- Fuzzy Finder
+    use "nvim-telescope/telescope.nvim"
 
   -- Complements
     -- Adds extra features for neovim
