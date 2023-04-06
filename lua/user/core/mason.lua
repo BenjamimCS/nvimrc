@@ -79,3 +79,7 @@ lspConfig.pyright.setup {
 lspConfig.powershell_es.setup {
   -- setup...
 }
+
+lspConfig.volar.setup {
+  -- setup...
+}
